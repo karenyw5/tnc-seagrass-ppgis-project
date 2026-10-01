@@ -1,16 +1,12 @@
-# install.packages("devtools")
-# packageVersion("vctrs")
-
-# install_github("GLISA-umich/PPGISr")
-# devtools::install_github("GLISA-umich/PPGISr", dependencies = TRUE)
-
-# install.packages("pak")
-# pak::pak("ElsevierSoftwareX/SOFTX-D-23-00109")
+# pak::pak("local::PPGISr-patched/PPGISr-main")
 
 library(PPGISr)
 library(sf)
 
 PPGISr::run_app(
+  editable_map = PPGISr::duluthEditablemap,
+  base_map = PPGISr::duluthBasemap,
+  basemap_name = "Reference Basemap",
   mapping_categories = c(
     "Supporting",
     "Provisioning",
@@ -24,4 +20,3 @@ PPGISr::run_app(
     "darkorange"
   )
 )
-

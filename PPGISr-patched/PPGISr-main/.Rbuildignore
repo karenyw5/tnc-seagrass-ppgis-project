@@ -1,0 +1,10 @@
+^.*\.Rproj$
+^Rproj\.user$
+^LICENSE.md$
+^README.Rmd$
+^dev$
+^CODE_OF_CONDUCT.Rmd$
+^CODE_OF_CONDUCT.md$
+^\.Rproj\.user$
+^\.github$
+^\.Renviron$
