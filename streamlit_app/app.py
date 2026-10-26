@@ -431,7 +431,7 @@ with st.sidebar:
     st.divider()
     st.caption(f"Participant ID: {st.session_state.participant_id}")
     st.caption("All questions are optional. You may stop at any time.")
-    st.caption("Prototype: responses are stored locally, not uploaded to GitHub.")
+    st.caption("Responses are stored locally, not uploaded to GitHub.")
 
 section = st.session_state.section
 
@@ -733,7 +733,5 @@ else:  # Follow-up questions
 
 st.divider()
 st.caption(
-    "Research prototype: participant responses are stored in a local SQLite database. "
-    "Do not upload it to GitHub or deploy this local-file storage unchanged "
-    "for multi-user public data collection."
+    "Participant responses are anonymous and stored in a local SQLite database. "
 )
