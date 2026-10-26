@@ -1,0 +1,4 @@
+participant_responses.sqlite
+participant_responses.sqlite-*
+__pycache__/
+.venv/

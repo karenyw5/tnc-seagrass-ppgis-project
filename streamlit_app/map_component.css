@@ -1,0 +1,49 @@
+.pgis-root { width:100%; font-family:var(--st-font,system-ui,sans-serif); color:var(--st-text-color,#263343); }
+.pgis-panel {border:1px solid #cbd6dd; border-radius:12px; overflow:hidden; background:#fff; }
+.pgis-top {display:flex; align-items:center; justify-content:space-between; gap:12px; padding:13px 15px; background:#f3f8fb; flex-wrap:wrap;}
+.pgis-heading {display:flex; flex-direction:column; gap:2px;}
+.pgis-heading strong {font-size:.98rem;}
+.pgis-heading span {font-size:.85rem; color:#526474;}
+.pgis-top-buttons {display:flex; gap:8px;}
+.pgis-top-buttons button {background:white; border:1px solid #b6c6d0; border-radius:7px; padding:7px 13px; min-height:35px; color:#243343; font-weight:600; cursor:pointer;}
+.pgis-top-buttons button:disabled {opacity:.45; cursor:not-allowed;}
+.pgis-body {display:grid; grid-template-columns: minmax(240px,295px) minmax(0,1fr); border-top:1px solid #dae3e9;}
+.pgis-benefit-panel {padding:12px; background:#f9fbfc; border-right:1px solid #dae3e9; min-width:0;}
+.pgis-benefit-tabs {display:grid; grid-template-columns:1fr 1fr; gap:6px;}
+.pgis-group-btn {border-radius:7px; border:1px solid #bacbd4; background:white; padding:9px 7px; font-size:.81rem; font-weight:700; line-height:1.25; color:#324c5d; cursor:pointer;}
+.pgis-group-btn.active {background:#176399; color:white; border-color:#176399;}
+.pgis-small {color:#506273; font-size:.86rem; margin:12px 1px 7px;}
+.pgis-benefit-list {display:flex; flex-direction:column; gap:5px; max-height:450px; overflow:auto; padding:0 2px 2px 0;}
+.pgis-benefit-btn {display:flex; align-items:center; justify-content:space-between; gap:7px; border:1px solid #d4dfe6; background:white; padding:8px 10px; border-radius:7px; text-align:left; font:inherit; font-size:.87rem; line-height:1.28; color:#263f50; cursor:pointer;}
+.pgis-benefit-btn.active {background:#efe6fa; border-color:#925ecb; box-shadow:inset 3px 0 #69299b; font-weight:650;}
+.pgis-benefit-count {font-size:.75rem; color:#4c5c66; background:#e9eff4; min-width:22px; padding:2px 5px; border-radius:14px; text-align:center;}
+.pgis-other {margin-top:12px;}
+.pgis-other[hidden] {display:none;}
+.pgis-other label, .pgis-notes label {display:block; font-size:.85rem; font-weight:600; margin-bottom:5px;}
+.pgis-other input {width:100%; box-sizing:border-box; padding:9px 8px; border:1px solid #bacad2; border-radius:6px;}
+.pgis-map-panel {position:relative; min-width:0; background:#eef3f5;}
+.pgis-map {width:100%; height:600px; z-index:0;}
+.pgis-legend {display:flex; align-items:center; flex-wrap:wrap; gap:7px; font-size:.78rem; padding:8px 12px; color:#475e6b; background:#fafcfd;}
+.pgis-legend-dot {width:11px; height:11px; display:inline-block; border-radius:3px; margin-left:8px;}
+.pgis-legend-dot:first-child {margin-left:0;}
+.pgis-legend-dot.active {background:#a77ce8; border:1px solid #69299b;}
+.pgis-legend-dot.other {background:#54b1ed; border:1px solid #146394;}
+.pgis-legend-dot.none {background:#fff; border:1px solid #5d7480;}
+.pgis-map .leaflet-interactive {cursor:pointer;}
+.pgis-bottom {display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 15px; background:#f3f8fb; flex-wrap:wrap; border-top:1px solid #dae3e9;}
+.pgis-status {color:#394d58; font-size:.87rem;}
+.pgis-bottom button {border-radius:7px; padding:9px 14px; cursor:pointer; font-weight:700;}
+.pgis-bottom button.primary {background:#176399; color:#fff; border:1px solid #176399;}
+.pgis-bottom button:disabled {opacity:.5; cursor:not-allowed;}
+.pgis-notes {padding:12px 15px; border-top:1px solid #dae3e9;}
+.pgis-notes textarea {width:100%; min-height:57px; resize:vertical; padding:9px; box-sizing:border-box; border-radius:6px; border:1px solid #bacad2; font-family:inherit;}
+@media (max-width:800px) {
+  .pgis-body {grid-template-columns:minmax(0,1fr);}
+  .pgis-benefit-panel {border-right:0; border-bottom:1px solid #dae3e9;}
+  .pgis-benefit-list {max-height:195px;}
+  .pgis-map {height:460px;}
+}
+
+/* Optional browser-location feedback, without moving the hex controls. */
+.pgis-location-status {position:absolute; top:10px; right:10px; z-index:500; max-width:235px; padding:6px 9px; border-radius:6px; font-size:.78rem; color:#243343; background:rgba(255,255,255,.92); box-shadow:0 1px 5px #67788855; pointer-events:none;}
+.pgis-location-status:empty {display:none;}
