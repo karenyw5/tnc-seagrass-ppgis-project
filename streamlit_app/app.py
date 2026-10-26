@@ -600,11 +600,7 @@ elif section == "Mapping":
             else:
                 st.button("Skip mapping and continue →", on_click=navigate,
                           args=("Follow-up questions",))
-            st.caption(
-                "Approximate prototype hexagons near Sanur, Padang Bai, and Nusa Lembongan. "
-                "Map tiles and the Leaflet library currently require an internet connection."
-            )
-
+                
 else:  # Follow-up questions
     st.title("Follow-up questions")
     benefits_yes = st.session_state.get("benefits") != "No"
