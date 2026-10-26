@@ -181,8 +181,10 @@ def initialize_db():
         }
         for name, datatype in new_columns.items():
             if name not in existing_survey_cols:
-                conn.execute(f"ALTER TABLE participant_surveys ADD COLUMN {name} {datatype}")
-
+                conn.execute(
+                    f'ALTER TABLE participant_surveys ADD COLUMN "{name}" {datatype}'
+                )
+                existing_survey_cols.add(name)
         existing_submission_cols = {
             row[1] for row in conn.execute("PRAGMA table_info(participant_submissions)")
         }

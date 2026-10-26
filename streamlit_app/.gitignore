@@ -1,4 +1,7 @@
 participant_responses.sqlite
 participant_responses.sqlite-*
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 __pycache__/
 .venv/
